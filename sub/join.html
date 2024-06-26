@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KOKE | 회원가입</title>
+</head>
+<!-- swiper cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.min.css" />
+<!-- gsap cdn : 애니메이션 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<!-- gsap cdn : 애니메이션 + 화면이동 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script defer src="../js/common.js"></script>
+<script defer src="./js/join.js"></script>
+
+<!-- google font cdn -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<!-- google icon cdn -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="./css/join.css">
+<link rel="icon" href="./imgs/ico_img.ico">
+
+<body>
+  <div class="top_bn_container">
+    <div class="top_bn align_center">
+      <a href="#!">
+        <p>구독 시작하면 3,000원 즉시 할인·무료 교환·무료 배송</p>
+        <p>내 취향 커피 추천받기
+          <span class="material-symbols-rounded">
+            chevron_right
+          </span>
+        </p>
+      </a>
+      <span class="top_bn_close material-symbols-rounded">
+        close
+      </span>
+    </div><!--top_bn-->
+  </div><!--top_bn_container-->
+
+  <header class="header_container">
+    <div class="header align_center">
+      <ul class="gnb">
+        <li><a href="#!">회원가입</a></li>
+        <li><a href="#!">로그인</a></li>
+        <li><a href="#!" class="header__cart">
+          장바구니
+          <span class="cart--icon material-symbols-rounded">
+            shopping_bag
+            <strong>1</strong>
+          </span>
+        </a></li>
+      </ul><!--gnb-->
+
+      <nav class="lnb">
+        <div class="lnb__menu">
+          <div class="lnb_left">
+            <div class="ham_btn">
+              <span>btn_line1</span>
+              <span>btn_line2</span>
+              <span>btn_line3</span>
+              <span>btn_line4</span>
+            </div>
+            <a href="#!" class="brand_search">브랜드 검색</a>
+            <a href="../sub/sub.html">모든 커피</a>
+            <a href="#!">내 커피 취향테스트</a>
+          </div><!--lnb_left-->
+
+          <div class="lnb_right">
+            <a href="#!">싱글오리진</a>
+            <a href="#!">블랜드</a>
+            <a href="#!">구독하기</a>
+            <div class="search_container">
+              <form action="">
+                <input type="text" id="search" name="search" class="search--bar" required>
+                <input type="submit" id="search_submit" class="search--icon" value="Rechercher">
+              </form>
+            </div>
+            <div class="free--delibery">무료배송</div>
+          </div><!--lnb_right-->
+        </div><!--lnb_menu-->
+        
+        <div class="lnb_logo_container">
+          <a href="../index.html" class="lnb__logo">
+            <img src="../imgs/logo.png" alt="KOKE 로고">
+          </a><!--lnb_logo-->
+          <div class="lnb_halfcircle_box">
+            <div class="lnb__halfcircle">lnb_halfcircle</div>
+          </div>
+        </div><!--lnb_logo_container-->
+      </nav><!--lnb-->
+      
+      <div class="lnb_menu_sheet">
+        <div class="ham__menu">
+          <ul class="align_center">
+            <li><a href="./sub/sub.html" class="depth1">모든 커피
+              <ul>
+                <li><a href="#!" class="depth2">브랜드</a></li>
+                <li><a href="#!" class="depth2">싱글오리진</a></li>
+                <li><a href="#!" class="depth2">블랜드</a></li>
+              </ul>
+            </a></li>
+            <li><a href="#!" class="depth1">내 커피 취향테스트
+              <ul>
+                <li><a href="#!" class="depth2">내 커피 취향테스트</a></li>
+                <li><a href="#!" class="depth2">구독하기</a></li>
+                <li><a href="#!" class="depth2">구독후기</a></li>
+              </ul>
+            </a></li>
+            <li><a href="#!" class="depth1">커뮤니티
+              <ul>
+                <li><a href="#!" class="depth2">EVENT/NEWS</a></li>
+                <li><a href="#!" class="depth2">REVIEW</a></li>
+              </ul>
+            </a></li>
+            <li><a href="#!" class="depth1">고객센터
+              <ul>
+                <li><a href="#!" class="depth2">공지사항</a></li>
+                <li><a href="#!" class="depth2">Q&A</a></li>
+                <li><a href="#!" class="depth2">1:1문의</a></li>
+              </ul>
+            </a></li>
+            <li><a href="#!" class="depth1">ABOUT US
+              <ul>
+                <li><a href="#!" class="depth2">코케:KOKE</a></li>
+                <li><a href="#!" class="depth2">CONTACT US</a></li>
+              </ul>
+            </a></li>
+          </ul>
+        </div><!--ham__menu-->
+        <div class="brand__menu">
+          <form action=""  class="brand_search_bar align_center">
+            <input type="text" name="brand_search" class="brand--search" required>
+            <input type="submit" id="brand_submit" class="brand--icon">
+          </form>
+          <ul class="index_text align_center">
+            <li><a href="#!">ALL</a></li>
+            <li><a href="#!">ㄱ</a></li>
+            <li><a href="#!">ㄴ</a></li>
+            <li><a href="#!">ㄷ</a></li>
+            <li><a href="#!">ㄹ</a></li>
+            <li><a href="#!">ㅁ</a></li>
+            <li><a href="#!">ㅂ</a></li>
+            <li><a href="#!">ㅅ</a></li>
+            <li><a href="#!">ㅇ</a></li>
+            <li><a href="#!">ㅈ</a></li>
+            <li><a href="#!">ㅊ</a></li>
+            <li><a href="#!">ㅋ</a></li>
+            <li><a href="#!">ㅌ</a></li>
+            <li><a href="#!">ㅍ</a></li>
+            <li><a href="#!">ㅎ</a></li>
+          </ul>
+          <ul class="brands align_center">
+            <li>
+              <a href="#!">리플로우 커피</a>
+              <a href="#!">슬러핀 커피</a>
+              <a href="#!">프로토콜 커피</a>
+              <a href="#!">컬러드 빈</a>
+              <a href="#!">오드이븐</a>
+              <a href="#!">콩볶는 사람들</a>
+              <a href="#!">커피몽타주</a>
+              <a href="#!">영앤도터스</a>
+              <a href="#!">하늘에 커피</a>
+              <a href="#!">디벨로핑룸</a>
+            </li>
+            <li>
+              <a href="#!">디카프워크룸</a>
+              <a href="#!">리플렉트 커피</a>
+              <a href="#!">토치 커피</a>
+              <a href="#!">카페플롬</a>
+              <a href="#!">하우트 커피컴퍼니</a>
+              <a href="#!">커넥츠커피</a>
+              <a href="#!">폰트 커피</a>
+              <a href="#!">차군 커피</a>
+              <a href="#!">알렉스더커피</a>
+              <a href="#!">수수 커피</a>
+            </li>
+            <li>
+              <a href="#!">웨이브온 커피</a>
+              <a href="#!">55도 커피</a>
+              <a href="#!">펠트</a>
+              <a href="#!">식물학 커피</a>
+              <a href="#!">히떼 로스터리</a>
+              <a href="#!">베르크</a>
+              <a href="#!">한국 커피</a>
+              <a href="#!">리버벨</a>
+              <a href="#!">보사노바</a>
+              <a href="#!">디카 커피랩</a>
+            </li>
+          </ul>
+        </div>
+      </div><!--lnb_menu_sheet-->
+    </div><!--header-->
+  </header><!--header_container-->
+
+  <section class="Join_container align_center">
+    <div class="join_title">
+      <h2>회원가입</h2>
+      <p>회원가입으로 코케 구독 서비스를 이용해 보세요.</p>
+    </div>
+    <form action="" name="join_form" class="join_forms">
+      <ul class="form__id">
+        <li>
+          <p>아이디</p>
+          <div>
+            <input type="text" id="user_id" autocomplete="off" required>
+            <button type="button" id="id_chk">아이디 중복체크</button>
+            <span>*8~14자를 입력하세요</span>
+          </div>
+        </li>
+      </ul><!--form__id-->
+      <ul class="form__pw">
+        <li>
+          <p>비밀번호</p>
+          <div>
+            <input type="password" id="user_pw" autocomplete="off" required>
+            <span>*8자 이상 입력하세요</span>
+          </div>
+        </li>
+        <li>
+          <p>비밀번호 확인</p>
+          <div>
+            <input type="password" id="user_pw_chk" autocomplete="off" required>
+          </div>
+        </li>
+      </ul><!--form__pw-->
+      <ul class="form__info">
+        <li>
+          <p>성명</p>
+          <div>
+            <input type="text" required>
+          </div>
+        </li>
+        <li>
+          <p>이메일</p>
+          <div>
+            <input type="text" required> @ <input type="text" name="changed_email" id="changed_email" required>
+            <select name="email" id="email">
+              <option value="">직접입력</option>
+              <option value="naver">naver.com</option>
+              <option value="nate">nate.com</option>
+              <option value="daum">daum.net</option>
+              <option value="gmail">gmail.com</option>
+              <option value="kakao">kakao.com</option>
+            </select>
+          </div>
+        </li>
+        <li>
+          <p>주소</p>
+          <div>
+            <select name="city" id="city" required>
+              <option value="">시, 도</option>
+              <option value="0123">서울</option>
+              <option value="0124">경기</option>
+              <option value="0125">부산</option>
+              <option value="0126">대구</option>
+              <option value="0127">강원도</option>
+              <option value="0128">충남</option>
+              <option value="0129">충북</option>
+              <option value="0130">전남</option>
+              <option value="0131">전북</option>
+              <option value="0132">경남</option>
+              <option value="0133">경북</option>
+              <option value="0134">제주</option>
+            </select>
+            <input type="text" id="city_post_num" name="city_post_num" class="city--num" required>
+            <input type="text" placeholder="나머지 주소" class="city--adr" required>
+          </div>
+        </li>
+        <li>
+          <p>휴대전화</p>
+          <div>
+            <select name="phone" id="phone" class="phone--sel" required>
+              <option>선택</option>
+              <option>02</option>                    
+              <option>031</option>
+              <option>032</option>
+              <option>033</option>
+              <option>041</option>
+              <option>042</option>
+              <option>043</option>
+              <option>044</option>
+              <option>051</option>
+              <option>052</option>
+              <option>053</option>
+              <option>054</option>
+              <option>055</option>
+              <option>061</option>
+              <option>062</option>
+              <option>063</option>
+              <option>064</option>
+            </select>
+            <span> - </span>
+            <input type="tel" maxlength="4" id="phone--midnum" class="phone--mid" required>
+            <span> - </span>
+            <input type="tel" maxlength="4" id="phone--lastnum" class="phone--last" required>
+          </div>
+        </li>
+      </ul><!--form__info-->
+      <hr>
+      <ul class="form__term">
+        <li>
+          <label>
+            <input type="checkbox" id="agree--all" required>
+            <p>전체 약관 동의</p>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" id="term1" class="term--element" required>
+            <p>약관1</p>
+            <textarea cols="30" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem saepe velit nam, consequuntur ea corrupti eaque aliquid reprehenderit repellendus libero assumenda veritatis debitis quo vitae laborum ut modi odio quibusdam? Inventore dolorum expedita voluptatibus deleniti facilis cupiditate exercitationem consequuntur reiciendis eaque. Expedita, voluptates quam voluptate ipsum, dolore non delectus laborum, impedit doloremque quisquam asperiores necessitatibus repellendus minima. In, qui necessitatibus.Tempora repellendus dolorem amet nam pariatur enim dicta quisquam animi culpa officia. Impedit beatae quas quibusdam doloribus accusamus omnis tempore eaque, esse quod rem molestiae ipsum ex doloremque quia eum! Culpa sint at voluptatibus repudiandae commodi quisquam quas illo mollitia, soluta debitis magni odio totam fugit laboriosam facilis ipsum placeat? Quos eveniet soluta aperiam sequi reprehenderit. Dolorem cum asperiores repellendus!Repellendus nobis reprehenderit minima sint maxime omnis dolor optio, quaerat odio fuga rem iusto praesentium! Cum, repellendus, unde odit distinctio officiis atque voluptas fuga, animi architecto tempore ut explicabo maiores?</textarea>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" id="term2" class="term--element" required>
+            <p>약관2</p>
+            <textarea cols="30" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem saepe velit nam, consequuntur ea corrupti eaque aliquid reprehenderit repellendus libero assumenda veritatis debitis quo vitae laborum ut modi odio quibusdam? Inventore dolorum expedita voluptatibus deleniti facilis cupiditate exercitationem consequuntur reiciendis eaque. Expedita, voluptates quam voluptate ipsum, dolore non delectus laborum, impedit doloremque quisquam asperiores necessitatibus repellendus minima. In, qui necessitatibus.Tempora repellendus dolorem amet nam pariatur enim dicta quisquam animi culpa officia. Impedit beatae quas quibusdam doloribus accusamus omnis tempore eaque, esse quod rem molestiae ipsum ex doloremque quia eum! Culpa sint at voluptatibus repudiandae commodi quisquam quas illo mollitia, soluta debitis magni odio totam fugit laboriosam facilis ipsum placeat? Quos eveniet soluta aperiam sequi reprehenderit. Dolorem cum asperiores repellendus!Repellendus nobis reprehenderit minima sint maxime omnis dolor optio, quaerat odio fuga rem iusto praesentium! Cum, repellendus, unde odit distinctio officiis atque voluptas fuga, animi architecto tempore ut explicabo maiores?</textarea>
+          </label>
+        </li>
+      </ul><!--form__term-->
+    </form>
+    <hr>
+    <div class="btns">
+      <button type="submit">가입</button>
+      <button type="reset">취소</button>
+    </div>
+  </section>
+  
+  <footer class="footer">
+    <div class="cs_container">
+      <ul class="cs align_center">
+        <li class="cs__center">
+          <h6>cs center</h6>
+          <p>070-4647-1868</p>
+          <ul>
+            <li>오전 10:00 ~ 오후 7:00</li>
+            <li>점심시간 : 오후 12:00 ~ 2:00</li>
+            <li>토 / 일 / 공휴일 휴무</li>
+          </ul>
+        </li>
+        <li class="store__guide">
+          <h6>store guide</h6>
+          <ul>
+            <li>
+              <span class="material-symbols-rounded">
+                mic
+              </span>
+              <p>HELP</p>
+              <a href="#!">고객센터</a>
+            </li>
+            <li>
+              <span class="material-symbols-rounded">
+                package
+              </span>
+              <p>ORDER</p>
+              <a href="#!">배송조회</a>
+            </li>
+            <li>
+              <span class="material-symbols-rounded">
+                live_help
+              </span>
+              <p>Q & A</p>
+              <a href="#!">상품문의</a>
+            </li>
+            <li>
+              <span class="material-symbols-rounded">
+                rate_review
+              </span>
+              <p>REVIEW</p>
+              <a href="#!">상품후기</a>
+            </li>
+          </ul>
+        </li>
+        <li class="return__exchange">
+          <h6>return · exchange</h6>
+          <input type="radio" id="delivery" name="cs" checked>
+          <input type="radio" id="return" name="cs">
+          <div class="return_labels">
+            <label for="delivery" class="delivery_lab">배송/택배</label>
+            <label for="return" class="return_lab">교환/반품</label>
+          </div>
+          <div class="return_sheets">
+            <ul class="delivery__sheet">
+              <li>택배 : 로젠택배 1588-9988</li>
+              <li>월~금 08:00~18:00 / 토 09:00~13:00</li>
+              <li>택배 관련 문의는 로젠택배로 연락 바랍니다.</li>
+            </ul>
+            <ul class="return__sheet">
+              <li>교환 및 반품 상담 : 070-4647-1868</li>
+              <li>월~금 08:00~18:00 / 점심시간 12:00~13:00</li>
+              <li>토, 일, 공휴일 휴무</li>
+            </ul>
+          </div>
+          <a href="#!">택배사 바로가기</a>
+        </li>
+      </ul>
+    </div><!--cs_container-->
+    <div class="policy align_center">
+      <ul>
+        <li><a href="#!">HOME </a></li>
+        <li><a href="#!">· ABOUT US </a></li>
+        <li><a href="#!">· AGREEMENT </a></li>
+        <li><a href="#!" class="policy--strong">· PRIVACY POLICY </a></li>
+        <li><a href="#!">· STORE GUIDE </a></li>
+        <li><a href="#!">· CS CENTER </a></li>
+      </ul>
+      <div class="sns">
+        <a href="#!">kakao</a>
+        <a href="#!">instar</a>
+      </div>
+    </div><!--policy-->
+    <div class="footer_info_container">
+      <div class="footer_info align_center">
+        <ul>
+          <li><strong>(주)컨슈머브릿지</strong> / 대표: 신재현, 박성환 / 개인정보보호책임자: 신재현 / 사업자등록번호: 713-86-01467 / 통신판매업신고번호: 제2021-서울강남-02469호</li>
+          <li>사업장소재지: 서울 강남구 테헤란로2길 27 패스트파이브 빌딩 9층 915호</li>
+          <li>주식회사 컨슈머브릿지는 전자상거래 등에서의 소비자보호에 관한 법률에 따른 통신판매중개자로서 중개하는 통신판매에 관여하여서는 통신판매의 당사자가 아니며</li>
+          <li>상품의 주문, 배송 및 환불 등과 관련한 의무와 책임은 각 판매자에게 있습니다.</li>
+        </ul>
+        <div><img src="../imgs/logo.png" alt="logo"></div>
+      </div>
+    </div><!--footer_info_container-->
+    <p class="align_center">ⓒ 2021 Consumer Bridge, Inc. All rights reserved</p>
+  </footer><!--footer-->
+</body>
+</html>

@@ -1,0 +1,153 @@
+/* style guide
+1278px, 12칼럼(1칼럼 79px, 거터 30px)
+섹션 바텀값 100px 내외
+
+<main color>
+검정색        color: #222;
+흰색          color: #fff;
+<point color>
+주황색     color: #ff6c57;
+<sub color>
+연노란색   color: #faf7e8;
+연주황색   color: #FDEAE0;
+
+<제목>
+국문     font-size: 39px;
+영문     font-size: 46px;
+<부제목>
+국문     font-size: 19px;
+영문     font-size: 32px;
+<탭>
+국문     font-size: 18px;
+영문     font-size: 20px;
+<본문>
+상품이름 font-size: 17px;
+맛       font-size: 16px;
+가격     font-size: 16px; font-weight: 700;
+*/
+
+
+
+/*-------------path---------------*/
+.path {
+	position: sticky;
+	padding: 20px 0;
+	top: 60px;
+	background-color: white;
+	z-index: 10;
+}
+.path li {display: inline-block;}
+.path li a {font-size: 13px; color: #777;}
+.path li a span {
+	vertical-align: middle;
+	font-size: 15px;
+	color: #777;
+}
+
+
+
+/*-------------middle_contants---------------*/
+.middle_contants {
+	display: flex;
+	gap: 100px;
+}
+
+.side_options { /*왼쪽 옵션창*/
+	flex: 1;
+	position: sticky;
+	top: 150px;
+	height: 1000px;
+	overflow: auto;
+}
+.sub__title {
+	text-align: center;
+	margin-bottom: 20px;
+}
+.sub__title h2 {font-size: 21px;}
+.sub__title .top_options {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	margin: 15px 0;
+}
+.sub__title .top_options a {
+  display: block;
+	padding: 5px 15px;
+	font-size: 13px;
+	border: 1px solid #dfdfdf;
+	border-radius: 20px;
+	box-sizing: border-box;
+}
+.sub__title .top_options a.top--active {
+  font-weight: 500;
+	color: #ff6c57;
+	border: 1px solid #ff6c57;
+}
+
+.side__option {
+	padding: 20px;
+	border-radius: 20px;
+	box-sizing: border-box;
+	background-color: #faf7e8;
+}
+#option {display: none;}
+#option:checked ~ .opt--label label {
+	color: #ff6c57;
+	border: 1px solid #ff6c57;
+	background-color: white;
+}
+#option ~ .opt--label label {
+	color: #222;
+	border: 1px solid #ccc;
+	background-color: transparent;
+}
+.side__option .opt--title:first-child {
+	margin-top: 0;
+}
+.opt--title {
+	font-size: 15px;
+	margin: 20px 0 8px 0;
+}
+.opt__seletors:first-child .opt--title {
+	margin-top: 0;
+}
+.opt--label {
+	display: flex;
+	gap: 10px;
+}
+.opt--label label {
+	display: inline-block;
+	font-size: 12px;
+	color: #777;
+	padding: 2px 7px 4px 7px;
+	border: 1px solid white;
+	border-radius: 30px;
+	box-sizing: border-box;
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+
+.sub_items {
+	flex: 3;
+}
+.sub_items .items { /*맛 선택 시트*/
+  overflow: visible;
+	height: 2400px;
+}
+.pagenation {
+	text-align: center;
+}
+.pagenation span {
+	font-size: 13px;
+	padding: 2px 7px;
+	border: 1px solid white;
+	border-radius: 50%;
+	color: #777;
+}
+.pagenation span.page_active {
+	border: 1px solid #dfdfdf;
+	background-color: #dfdfdf;
+}
+
+
+

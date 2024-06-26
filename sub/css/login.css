@@ -1,0 +1,151 @@
+/* style guide
+
+1278px, 12칼럼(1칼럼 79px, 거터 30px)
+섹션 바텀값 100px 내외
+
+<main color>
+검정색        color: #222;
+흰색          color: #fff;
+<point color>
+주황색     color: #ff6c57;
+<sub color>
+연노란색   color: #faf7e8;
+연주황색   color: #FDEAE0;
+
+<제목>
+국문     font-size: 39px;
+영문     font-size: 46px;
+<부제목>
+국문     font-size: 19px;
+영문     font-size: 32px;
+<탭>
+국문     font-size: 18px;
+영문     font-size: 20px;
+<본문>
+상품이름 font-size: 17px;
+맛       font-size: 16px;
+가격     font-size: 16px; font-weight: 700;
+
+*/
+
+
+
+/*------------------login_form-----------------*/
+.login_container {
+  width: 300px;
+  margin: 0 auto;
+  padding-top: 70px;
+}
+.login_container h2 {
+  font-size: 29px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.login_form input {
+  display: block; 
+  width: 300px;
+  height: 40px;
+  padding: 0 5px;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.login_form button {
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 15px;
+  border: 1px solid #222;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #222;
+  color: white;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.login_form button:active {
+  border: 1px solid #000;
+  background-color: #000;
+}
+
+.login_forms label {
+  margin-right: 20px;
+}
+.login_forms label span {
+  font-size: 15px;
+}
+
+.social_login h3 {
+  font-size: 17px;
+  font-weight: 400;
+  text-align: center;
+  color: #999;
+  margin: 30px 0 20px 0;
+  position: relative;
+}
+.social_login h3::before {
+  content: '';
+  display: block;
+  width: 33%;
+  height: 1px;
+  background-color: #dfdfdf;
+  position: absolute;
+  top: 48%; left: 0;
+}
+.social_login h3::after {
+  content: '';
+  display: block;
+  width: 33%;
+  height: 1px;
+  background-color: #dfdfdf;
+  position: absolute;
+  top: 48%; right: 0;
+}
+.social_login button {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.social_login button span {
+  vertical-align: top;
+  font-size: 15px;
+  color: #222;
+  margin-left: 10px;
+}
+.social_login .naver--btn {
+  background-color: #00BF18;
+}
+.social_login .kakao--btn {
+  background-color: #ffe812;
+  color: #222;
+}
+.social_login .google--btn {
+  background-color: #4285f4;
+}
+
+.login_container p {
+  font-size: 15px;
+  color: #999;
+  margin-top: 30px;
+  text-align: center;
+}
+.login_container p a {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ff6c57;
+  margin-left: 5px;
+}
+.login_container p a:hover {
+  text-decoration: underline;
+}

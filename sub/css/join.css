@@ -1,0 +1,157 @@
+/* style guide
+
+1278px, 12칼럼(1칼럼 79px, 거터 30px)
+섹션 바텀값 100px 내외
+
+<main color>
+검정색        color: #222;
+흰색          color: #fff;
+<point color>
+주황색     color: #ff6c57;
+<sub color>
+연노란색   color: #faf7e8;
+연주황색   color: #FDEAE0;
+
+<제목>
+국문     font-size: 39px;
+영문     font-size: 46px;
+<부제목>
+국문     font-size: 19px;
+영문     font-size: 32px;
+<탭>
+국문     font-size: 18px;
+영문     font-size: 20px;
+<본문>
+상품이름 font-size: 17px;
+맛       font-size: 16px;
+가격     font-size: 16px; font-weight: 700;
+
+*/
+
+
+
+/*------------------Join_container-----------------*/
+.Join_container {
+  padding: 70px 250px;
+  box-sizing: border-box;
+}
+.join_title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.join_title h2 {
+  font-size: 29px;
+}
+.join_title p {
+  color: #999;
+  margin-top: 10px;
+}
+
+.join_forms ul li {
+  display: flex;
+  line-height: 28px;
+  margin-bottom: 20px;
+}
+.join_forms ul li p {
+  width: 120px;
+  font-size: 15px;
+}
+.join_forms ul li div input {
+  outline: none;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 10px;
+  font-size: 13px;
+}
+.join_forms ul li div button {
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #777;
+  color: white;
+  font-size: 13px;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+.join_forms ul li div button:active {
+  background-color: #222;
+}
+.join_forms ul li div span {
+  font-size: 13px;
+}
+.join_forms ul:nth-child(-n+2) li div span {
+  color: #ff6c57;
+}
+.join_forms ul li select {
+  outline: none;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 28px;
+  line-height: 28px;
+  font-size: 13px;
+}
+.join_forms ul li select option {
+  font-size: 13px;
+}
+
+hr {
+  margin: 30px 0;
+  border: 1px solid #efefef;
+}
+
+.Join_container form .form__term li {margin-bottom: 0;}
+.form__term input, .form__term p {
+  display: inline-block;
+}
+.form__term li label p {
+  width: 100px;
+}
+.form__term li label textarea {
+  outline: none;
+  padding: 10px;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+  box-sizing: border-box;
+  width: 774px;
+  height: 70px;
+  font-size: 13px;
+  text-align: justify;
+  color: #555;
+}
+
+.city--num {width: 70px;}
+.city--adr {width: 520px;}
+
+.phone--sel {width: 70px;}
+.phone--mid {width: 70px;}
+.phone--last {width: 70px;}
+
+.btns {
+  width: 100%;
+  text-align: center;
+}
+.btns button {
+  padding: 5px 10px;
+  font-size: 15px;
+  outline: none;
+  border: 1px solid #222;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+.btns button:first-child {
+  border: 1px solid #555;
+  background-color: #555;
+  color: white;
+}
+.btns button:first-child:active {
+  border: 1px solid #222;
+  background-color: #222;
+}
