@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KOKE | [콩볶는사람들] 스프링 블렌드</title>
+</head>
+<!-- swiper cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.min.css" />
+<!-- gsap cdn : 애니메이션 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<!-- gsap cdn : 애니메이션 + 화면이동 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script defer src="../js/common.js"></script>
+<script defer src="./js/detail.js"></script>
+
+<!-- google font cdn -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<!-- google icon cdn -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href=".//css/detail.css">
+<link rel="icon" href="./imgs/ico_img.ico">
+
+<body>
+  <div class="top_bn_container">
+    <div class="top_bn align_center">
+      <a href="#!">
+        <p>구독 시작하면 3,000원 즉시 할인·무료 교환·무료 배송</p>
+        <p>내 취향 커피 추천받기
+          <span class="material-symbols-rounded">
+            chevron_right
+          </span>
+        </p>
+      </a>
+      <span class="top_bn_close material-symbols-rounded">
+        close
+      </span>
+    </div><!--top_bn-->
+  </div><!--top_bn_container-->
+
+  <header class="header_container">
+    <div class="header align_center">
+      <ul class="gnb">
+        <li><a href="#!">회원가입</a></li>
+        <li><a href="#!">로그인</a></li>
+        <li><a href="#!" class="header__cart">
+          장바구니
+          <span class="cart--icon material-symbols-rounded">
+            shopping_bag
+            <strong>1</strong>
+          </span>
+        </a></li>
+      </ul><!--gnb-->
+
+      <nav class="lnb">
+        <div class="lnb__menu">
+          <div class="lnb_left">
+            <div class="ham_btn">
+              <span>btn_line1</span>
+              <span>btn_line2</span>
+              <span>btn_line3</span>
+              <span>btn_line4</span>
+            </div>
+            <a href="#!" class="brand_search">브랜드 검색</a>
+            <a href="../sub/sub.html">모든 커피</a>
+            <a href="#!">내 커피 취향테스트</a>
+          </div><!--lnb_left-->
+
+          <div class="lnb_right">
+            <a href="#!">싱글오리진</a>
+            <a href="#!">블랜드</a>
+            <a href="#!">구독하기</a>
+            <div class="search_container">
+              <form action="">
+                <input type="text" id="search" name="search" class="search--bar" required>
+                <input type="submit" id="search_submit" class="search--icon" value="Rechercher">
+              </form>
+            </div>
+            <div class="free--delibery">무료배송</div>
+          </div><!--lnb_right-->
+        </div><!--lnb_menu-->
+        
+        <div class="lnb_logo_container">
+          <a href="../index.html" class="lnb__logo">
+            <img src="../imgs/logo.png" alt="KOKE 로고">
+          </a><!--lnb_logo-->
+          <div class="lnb_halfcircle_box">
+            <div class="lnb__halfcircle">lnb_halfcircle</div>
+          </div>
+        </div><!--lnb_logo_container-->
+      </nav><!--lnb-->
+      
+      <div class="lnb_menu_sheet">
+        <div class="ham__menu">
+          <ul class="align_center">
+            <li><a href="../sub/sub.html" class="depth1">모든 커피
+              <ul>
+                <li><a href="#!" class="depth2">브랜드</a></li>
+                <li><a href="#!" class="depth2">싱글오리진</a></li>
+                <li><a href="#!" class="depth2">블랜드</a></li>
+              </ul>
+            </a></li>
+            <li><a href="#!" class="depth1">내 커피 취향테스트
+              <ul>
+                <li><a href="#!" class="depth2">내 커피 취향테스트</a></li>
+                <li><a href="#!" class="depth2">구독하기</a></li>
+                <li><a href="#!" class="depth2">구독후기</a></li>
+              </ul>
+            </a></li>
+            <li><a href="#!" class="depth1">커뮤니티
+              <ul>
+                <li><a href="#!" class="depth2">EVENT/NEWS</a></li>
+                <li><a href="#!" class="depth2">REVIEW</a></li>
+              </ul>
+            </a></li>
+            <li><a href="#!" class="depth1">고객센터
+              <ul>
+                <li><a href="#!" class="depth2">공지사항</a></li>
+                <li><a href="#!" class="depth2">Q&A</a></li>
+                <li><a href="#!" class="depth2">1:1문의</a></li>
+              </ul>
+            </a></li>
+            <li><a href="#!" class="depth1">ABOUT US
+              <ul>
+                <li><a href="#!" class="depth2">코케:KOKE</a></li>
+                <li><a href="#!" class="depth2">CONTACT US</a></li>
+              </ul>
+            </a></li>
+          </ul>
+        </div><!--ham__menu-->
+        <div class="brand__menu">
+          <form action=""  class="brand_search_bar align_center">
+            <input type="text" name="brand_search" class="brand--search" required>
+            <input type="submit" id="brand_submit" class="brand--icon">
+          </form>
+          <ul class="index_text align_center">
+            <li><a href="#!">ALL</a></li>
+            <li><a href="#!">ㄱ</a></li>
+            <li><a href="#!">ㄴ</a></li>
+            <li><a href="#!">ㄷ</a></li>
+            <li><a href="#!">ㄹ</a></li>
+            <li><a href="#!">ㅁ</a></li>
+            <li><a href="#!">ㅂ</a></li>
+            <li><a href="#!">ㅅ</a></li>
+            <li><a href="#!">ㅇ</a></li>
+            <li><a href="#!">ㅈ</a></li>
+            <li><a href="#!">ㅊ</a></li>
+            <li><a href="#!">ㅋ</a></li>
+            <li><a href="#!">ㅌ</a></li>
+            <li><a href="#!">ㅍ</a></li>
+            <li><a href="#!">ㅎ</a></li>
+          </ul>
+          <ul class="brands align_center">
+            <li>
+              <a href="#!">리플로우 커피</a>
+              <a href="#!">슬러핀 커피</a>
+              <a href="#!">프로토콜 커피</a>
+              <a href="#!">컬러드 빈</a>
+              <a href="#!">오드이븐</a>
+              <a href="#!">콩볶는 사람들</a>
+              <a href="#!">커피몽타주</a>
+              <a href="#!">영앤도터스</a>
+              <a href="#!">하늘에 커피</a>
+              <a href="#!">디벨로핑룸</a>
+            </li>
+            <li>
+              <a href="#!">디카프워크룸</a>
+              <a href="#!">리플렉트 커피</a>
+              <a href="#!">토치 커피</a>
+              <a href="#!">카페플롬</a>
+              <a href="#!">하우트 커피컴퍼니</a>
+              <a href="#!">커넥츠커피</a>
+              <a href="#!">폰트 커피</a>
+              <a href="#!">차군 커피</a>
+              <a href="#!">알렉스더커피</a>
+              <a href="#!">수수 커피</a>
+            </li>
+            <li>
+              <a href="#!">웨이브온 커피</a>
+              <a href="#!">55도 커피</a>
+              <a href="#!">펠트</a>
+              <a href="#!">식물학 커피</a>
+              <a href="#!">히떼 로스터리</a>
+              <a href="#!">베르크</a>
+              <a href="#!">한국 커피</a>
+              <a href="#!">리버벨</a>
+              <a href="#!">보사노바</a>
+              <a href="#!">디카 커피랩</a>
+            </li>
+          </ul>
+        </div>
+      </div><!--lnb_menu_sheet-->
+    </div><!--header-->
+  </header><!--header_container-->
+
+  <ul class="path align_center">
+    <li><a href="../index.html">
+      <span class="material-symbols-rounded">
+        home
+      </span>
+      홈
+    </a></li>
+    <li><a href="../sub/sub.html">
+       / 
+      <span class="material-symbols-rounded">
+        coffee
+      </span>
+      모든커피
+    </a></li>
+    <li><a href="./detail.html">
+       / 
+      <span class="material-symbols-rounded">
+        local_cafe
+      </span>
+      [콩볶는사람들] 스프링 블렌드
+    </a></li>
+  </ul><!--header_container-->
+
+  <section class="top_infomation align_center">
+    <div class="img__view">
+      <div class="main--img">
+        <img src="./imgs/thumbnail_01.JPG" alt="main--img">
+      </div>
+      <div class="thum">
+        <div class="brand--logo">
+          <img src="./imgs/brand_logo.jpg" alt="brand_logo">
+          <span>콩볶는 사람들</span>
+        </div>
+        <div class="thum--img">
+            <img src="./imgs/thumbnail_01.JPG" alt="thumbnail_01">
+            <img src="./imgs/thumbnail_02.JPG" alt="thumbnail_02">
+        </div>
+      </div>
+    </div><!--img__view-->
+
+    <div class="buy__option">
+      <h2>스프링 블렌드</h2>
+      <p>#밀크초코, 은은함</p>
+      <div class="opt--tab">
+        <span class="buy_oneth">한번만 구매하기</span>
+        <span class="subscribe">구독하기</span>
+        <span class="opt_tab_btn">bg</span>
+      </div>
+      <ul class="info">
+        <li>
+          <p class="txt-l">판매가</p>
+          <p class="text-r"><strong>4,000원</strong></p>
+        </li>
+        <li>
+          <p class="txt-l">구매혜택</p>
+          <p class="text-r">적립 마일리지 : + 200원 <span>(상품200원)</span></p>
+        </li>
+        <li>
+          <p class="txt-l">제조사</p>
+          <p class="text-r">(주)콩볶는 사람들</p>
+        </li>
+        <li>
+          <p class="txt-l">원산지</p>
+          <p class="text-r">브라질, 콜롬비아, 에티오피아</p>
+        </li>
+        <li>
+          <p class="txt-l">구성품</p>
+          <p class="text-r">스프링 블렌드(200g, 500g, 1kg)</p>
+        </li>
+        <li>
+          <p class="txt-l">원두 용량</p>
+          <p class="text-r">
+            <span class="info--opt">200g</span>
+            <span class="info--opt">500g</span>
+            <span class="info--opt">1kg</span>
+          </p>
+        </li>
+        <li>
+          <p class="txt-l">분쇄 선택</p>
+          <ul class="text-r">
+            <li>
+              <span class="info--opt">홀빈(분쇄 안함)</span>
+              <span class="info--opt">커피 메이커</span>
+              <span class="info--opt">에스프레소 머신</span>
+            </li>
+            <li>
+              <span class="info--opt">프렌치 프레스</span>
+              <span class="info--opt">핸드 드립</span>
+              <span class="info--opt">모카포트</span>
+            </li>
+          </ul>
+        </li>
+        <li class="info_subscribe_container">
+          <div class="info__subscribe">
+            <p class="txt-l">구독하기</p>
+            <p class="text-r">
+              <span class="info--opt">1주</span>
+              <span class="info--opt">2주</span>
+              <span class="info--opt">3주</span>
+              <span class="info--opt">4주</span>
+            </p>
+          </div>
+        </li>
+      </ul>
+      <div class="buy--btns">
+        <input type="checkbox" id="heartBtn">
+        <button type="button">장바구니</button>
+        <button type="button" class="buy--btn">구매하기</button>
+        <label for="heartBtn" class="heart">❤</label>
+      </div>
+    </div>
+  </section><!--top_infomation-->
+
+  <section class="detail_container align_center" id="productDetail">
+    <div class="sectionTab tab01">
+      <div class="tabOn"><a href="#productDetail">상품상세정보</a></div>
+      <div><a href="#delibery">배송안내</a></div>
+      <div><a href="#review">상품후기<span>(25)</span></a></div>
+      <div><a href="#qna">상품문의<span>(1)</span></a></div>
+    </div>
+    <img src="./imgs/detail_01.JPG" alt="product_detail">
+    <img src="./imgs/detail_02.JPG" alt="product_detail">
+  </section><!--detail_container : productDetail-->
+  
+  <section class="detail_container align_center" id="delibery">
+    <div class="sectionTab tab02">
+      <div><a href="#productDetail">상품상세정보</a></div>
+      <div class="tabOn"><a href="#delibery">배송안내</a></div>
+      <div><a href="#review">상품후기<span>(25)</span></a></div>
+      <div><a href="#qna">상품문의<span>(1)</span></a></div>
+    </div>
+    <ul class="desc">
+      <li>
+        <p class="desc--title">당일 출고안내</p>
+        <div>
+          <p>원두커피의 경우 신선한 원두공급을 위해 오후 3시까지 입금 확인된 주문건에 한해 당일 로스팅 후 당일 출고됩니다.</p>
+          <p>수제과일청의 경우 신선도를 위해 오후 3시까지 입금 확인된 주문건에 한해 당일 제조 후 당일 출고됩니다. (1/2/4kg은 당일발송 제외)</p>
+        </div>
+      </li>
+      <li>
+        <p class="desc--title">배송안내</p>
+        <div>
+          <p>1. 오후3시까지 입금 확인된 주문건만 당일 로스팅됩니다.</p>
+          <p>2. 토, 일요일 및 공휴일 주문건은 다음날 로스팅 후 발송됩니다.</p>
+          <p>3. 배송은 출고일부터 1~3일 소요 될 수 있습니다.</p>
+          <p>4. 제주, 도서 산간 지역은 추가요금이 발생 할 수 있습니다.</p>
+        </div>
+      </li>
+      <li>
+        <p class="desc--title">원두커피 교환/반품</p>
+        <div>
+          <p>갓 볶은 원두커피는 제조식품으로 교환 및 환불이 불가한 상품입니다.</p>
+          <p>다음 사항은 교환 환불이 불가능하오니 양해 부탁드립니다.</p>
+          <p> → 주문시 분쇄옵션사항 선택을 잘못한 경우 </p>
+          <p> → 기호에 의한 고객님의 단순변심 </p>
+          <p>단, 제품의 하자로 인한 교환 및 환불은 가능합니다.</p>
+        </div>
+      </li>
+      <li>
+        <p class="desc--title">커피용품 교환/반품</p>
+        <div>
+          <p>→ 상품 수령 후 7일이내에 교환, 반품이 가능합니다. 단, 포장을 개봉하여 사용하거나 훼손되었을 경우에는 반품이 불가합니다. </p>
+          <p>→ 구매자 변심으로 인한 교환/반품의 경우 왕복 택배비는 고객님이 부담하셔야 합니다. (무료배송상품도 동일) </p>
+          <p>→ 제품하자나 오배송 등에 의한 교환/반품의 경우에는 별도의 배송금액이 발생하지 않습니다.</p>
+        </div>
+      </li>
+      <li>
+        <p class="desc--title">수제 과일청 교환/반품</p>
+        <div>
+          <p>수제 과일청은 제조식품으로 교환 및 환불이 불가한 상품입니다.</p>
+          <p>(다음 사항은 교환, 환불이 불가능하오니 양해 부탁드립니다.)</p>
+          <p> → 주문시 옵션사항 선택을 잘못한 경우 </p>
+          <p> → 기호에 의한 고객님의 단순변심 </p>
+          <p>단, 제품의 하자로 인한 교환 및 환불은 가능합니다.</p>
+        </div>
+      </li>
+      <li>
+        <p class="desc--title">주의사항</p>
+        <div>
+          <p>→고객님 부주의로 분쇄옵션사항을 잘못 선택하였을 경우 교환 및 환불이 불가능한점 양해 부탁드립니다.</p>
+          <p>→고객센터로 먼저 연락을 주시면 친절하게 교환 및 반품방법에 대해 안내 해드립니다. </p>
+          <p>→고객님 임의대로 반품, 교환 등을하여 제품을 보내실 경우, 제품이 유실되거나 처리기간이 길어질 수 있으니  꼭 고객센터(051-526-1183~4)로 먼저 연락을 주시면 감사하겠습니다. </p>
+          <p>
+            ※ 반품시 편의점 택배는 이용이 불가합니다.</p>
+        </div>
+      </li>
+      <li>
+        <p class="desc--title">배송업체</p>
+        <div>
+          <p><strong>cj대한통운 / 배송비: 2,500원(3만원 이상 무료배송)</strong></p>
+        </div>
+      </li>
+    </ul>
+  </section><!--detail_container : delibery-->
+  
+  <section class="detail_container align_center" id="review">
+    <div class="sectionTab tab03">
+      <div><a href="#productDetail">상품상세정보</a></div>
+      <div><a href="#delibery">배송안내</a></div>
+      <div class="tabOn"><a href="#review">상품후기<span>(25)</span></a></div>
+      <div><a href="#qna">상품문의<span>(1)</span></a></div>
+    </div>
+    <ul class="reviews">
+      <li><a href="#!">
+        <span class="review--tip">베스트리뷰</span>
+        <span class="review--title">부드럽고 신선한맛은 원두가 좋아서겠죠^^.원두 볶아 당일 배송이 굿입니다.</span>
+        <span class="user--name">네이버페이 구매자</span>
+        <span class="buy--date">2022.07.24</span>
+      </a></li>
+      <li><a href="#!">
+        <span class="review--tip">베스트리뷰</span>
+        <span class="review--title">깊은맛, 혀끝과 목에서 시작되는 짜릿함.</span>
+        <span class="user--name">lunavell</span>
+        <span class="buy--date">2022.07.20</span>
+      </a></li>
+      <li><a href="#!">
+        <span class="review--tip">베스트리뷰</span>
+        <span class="review--title">예가체프 커피 산미 좋아요</span>
+        <span class="user--name">wlqdprkwk12</span>
+        <span class="buy--date">2022.07.18</span>
+      </a></li>
+      <li><a href="#!">
+        <span class="review--star">⭐⭐⭐⭐⭐</span>
+        <span class="review--title">스프링블랜드를 먹어본 뒤로는 다른 원두는 구매한적이 없어요</span>
+        <span class="user--name">djWjwlwlsWK098</span>
+        <span class="buy--date">2022.07.09</span>
+      </a></li>
+      <li><a href="#!">
+        <span class="review--star">⭐⭐⭐⭐⭐</span>
+        <span class="review--title">가성비 좋은 커피. 자주 주문합니다</span>
+        <span class="user--name">네이버페이 구매자</span>
+        <span class="buy--date">2022.07.05</span>
+      </a></li>
+      <li><a href="#!">
+        <span class="review--star">⭐⭐⭐⭐⭐</span>
+        <span class="review--title">스프링블랜드를 먹어본 뒤로는 다른 원두는 구매한적이 없어요</span>
+        <span class="user--name">dyrield</span>
+        <span class="buy--date">2022.07.02</span>
+      </a></li>
+      <li><a href="#!">
+        <span class="review--star">⭐⭐⭐⭐⭐</span>
+        <span class="review--title">커피향으 잘 보존되고 원두가 신선한것으로 사용~~</span>
+        <span class="user--name">네이버페이 구매자</span>
+        <span class="buy--date">2022.06.30</span>
+      </a></li>
+      <li><a href="#!">
+        <span class="review--star">⭐⭐⭐⭐⭐</span>
+        <span class="review--title">산미가 살짝있으면서 향긋하고맛있습니다
+          재구매하려고요</span>
+        <span class="user--name">qlwjdrb@naver.com</span>
+        <span class="buy--date">2022.06.27</span>
+      </a></li>
+      <li><a href="#!">
+        <span class="review--star">⭐⭐⭐⭐⭐</span>
+        <span class="review--title">향이 좋아요</span>
+        <span class="user--name">네이버페이 구매자</span>
+        <span class="buy--date">2022.07.05</span>
+      </a></li>
+      <li><a href="#!">
+        <span class="review--star">⭐⭐⭐⭐⭐</span>
+        <span class="review--title">봄향기 물씬~~~ 늘 애용합니다</span>
+        <span class="user--name">네이버페이 구매자</span>
+        <span class="buy--date">2022.07.05</span>
+      </a></li>
+    </ul>
+    <div class="pagenation">
+      <label for="" class="page--active">1</label>
+      <label for="">2</label>
+      <label for="">3</label>
+    </div>
+  </section><!--detail_container : review-->
+  
+  <section class="detail_container align_center" id="qna">
+    <div class="sectionTab tab04">
+      <div><a href="#productDetail tab04">상품상세정보</a></div>
+      <div><a href="#delibery">배송안내</a></div>
+      <div><a href="#review">상품후기<span>(25)</span></a></div>
+      <div class="tabOn"><a href="#qna">상품문의<span>(1)</span></a></div>
+    </div>
+    <ul class="reviews">
+      <li><a href="#!">
+        <span class="review--star">답변완료</span>
+        <span class="review--title">원두문의</span>
+        <span class="user--name">네이버페이 구매자</span>
+        <span class="buy--date">2022.07.05</span>
+      </a></li>
+    </ul>
+    <div class="pagenation">
+      <label for="" class="page--active">1</label>
+    </div>
+  </section><!--detail_container : qna-->
+  
+  <footer class="footer">
+    <div class="cs_container">
+      <ul class="cs align_center">
+        <li class="cs__center">
+          <h6>cs center</h6>
+          <p>070-4647-1868</p>
+          <ul>
+            <li>오전 10:00 ~ 오후 7:00</li>
+            <li>점심시간 : 오후 12:00 ~ 2:00</li>
+            <li>토 / 일 / 공휴일 휴무</li>
+          </ul>
+        </li>
+        <li class="store__guide">
+          <h6>store guide</h6>
+          <ul>
+            <li>
+              <span class="material-symbols-rounded">
+                mic
+              </span>
+              <p>HELP</p>
+              <a href="#!">고객센터</a>
+            </li>
+            <li>
+              <span class="material-symbols-rounded">
+                package
+              </span>
+              <p>ORDER</p>
+              <a href="#!">배송조회</a>
+            </li>
+            <li>
+              <span class="material-symbols-rounded">
+                live_help
+              </span>
+              <p>Q & A</p>
+              <a href="#!">상품문의</a>
+            </li>
+            <li>
+              <span class="material-symbols-rounded">
+                rate_review
+              </span>
+              <p>REVIEW</p>
+              <a href="#!">상품후기</a>
+            </li>
+          </ul>
+        </li>
+        <li class="return__exchange">
+          <h6>return · exchange</h6>
+          <input type="radio" id="delivery" name="cs" checked>
+          <input type="radio" id="return" name="cs">
+          <div class="return_labels">
+            <label for="delivery" class="delivery_lab">배송/택배</label>
+            <label for="return" class="return_lab">교환/반품</label>
+          </div>
+          <div class="return_sheets">
+            <ul class="delivery__sheet">
+              <li>택배 : 로젠택배 1588-9988</li>
+              <li>월~금 08:00~18:00 / 토 09:00~13:00</li>
+              <li>택배 관련 문의는 로젠택배로 연락 바랍니다.</li>
+            </ul>
+            <ul class="return__sheet">
+              <li>교환 및 반품 상담 : 070-4647-1868</li>
+              <li>월~금 08:00~18:00 / 점심시간 12:00~13:00</li>
+              <li>토, 일, 공휴일 휴무</li>
+            </ul>
+          </div>
+          <a href="#!">택배사 바로가기</a>
+        </li>
+      </ul>
+    </div><!--cs_container-->
+    <div class="policy align_center">
+      <ul>
+        <li><a href="#!">HOME </a></li>
+        <li><a href="#!">· ABOUT US </a></li>
+        <li><a href="#!">· AGREEMENT </a></li>
+        <li><a href="#!" class="policy--strong">· PRIVACY POLICY </a></li>
+        <li><a href="#!">· STORE GUIDE </a></li>
+        <li><a href="#!">· CS CENTER </a></li>
+      </ul>
+      <div class="sns">
+        <a href="#!">kakao</a>
+        <a href="#!">instar</a>
+      </div>
+    </div><!--policy-->
+    <div class="footer_info_container">
+      <div class="footer_info align_center">
+        <ul>
+          <li><strong>(주)컨슈머브릿지</strong> / 대표: 신재현, 박성환 / 개인정보보호책임자: 신재현 / 사업자등록번호: 713-86-01467 / 통신판매업신고번호: 제2021-서울강남-02469호</li>
+          <li>사업장소재지: 서울 강남구 테헤란로2길 27 패스트파이브 빌딩 9층 915호</li>
+          <li>주식회사 컨슈머브릿지는 전자상거래 등에서의 소비자보호에 관한 법률에 따른 통신판매중개자로서 중개하는 통신판매에 관여하여서는 통신판매의 당사자가 아니며</li>
+          <li>상품의 주문, 배송 및 환불 등과 관련한 의무와 책임은 각 판매자에게 있습니다.</li>
+        </ul>
+        <div><img src="../imgs/logo.png" alt="logo"></div>
+      </div>
+    </div><!--footer_info_container-->
+    <p class="align_center">ⓒ 2021 Consumer Bridge, Inc. All rights reserved</p>
+  </footer><!--footer-->
+
+  <div class="quick_menu_container">
+    <div class="quick_menu">
+      <div class="quick_btns">
+        <a href="#!" class="quick_btn01">
+          <span class="material-symbols-rounded menu--icon">
+            search
+          </span>
+        </a>
+        <a href="#!" class="quick_btn02">
+          <span class="material-symbols-rounded menu--icon">
+            shopping_bag
+          </span>
+        </a>
+        <a href="#!" class="quick_btn03">
+          <span class="material-symbols-rounded menu--icon">
+            local_shipping
+          </span>
+        </a>
+        <a href="#!" class="quick_btn04">
+          <span class="material-symbols-rounded menu--icon">
+            history
+          </span>
+        </a>
+      </div><!--quick_btns-->
+      <div class="tooltip">
+        <span class="menu--name quick--tooltip01">검색</span>
+        <span class="menu--name quick--tooltip02">장바구니(1)</span>
+        <span class="menu--name quick--tooltip03">배송조회</span>
+        <span class="menu--name quick--tooltip04">최근 본 상품</span>
+      </div>
+    </div><!--quick_menu-->
+
+    <div class="top_btns">
+      <a href="#!" class="top_btn">
+        <span class="material-symbols-rounded menu--icon">
+          keyboard_double_arrow_up
+        </span>
+      </a>
+      <a href="#!" class="down_btn">
+        <span class="material-symbols-rounded menu--icon">
+          keyboard_double_arrow_down
+        </span>
+      </a>
+    </div><!--top_btns-->
+  </div><!--quick_menu_container-->
+    
+  <div class="floating_bn">
+    <a href="#!" class="bn__default">
+      <div class="default--img">
+        <img src="../imgs/floating_banner_img.png" alt="floating_banner_img">
+      </div>
+      
+      <button class="floating__btn">
+        <span>내 취향 저격 커피는?</span>
+        <span>취향테스트 하러가기!</span>
+      </button>
+    </a>
+  </div><!--floating_bn-->
+
+</body>
+</html>

@@ -1,0 +1,349 @@
+/* style guide
+1278px, 12칼럼(1칼럼 79px, 거터 30px)
+섹션 바텀값 100px 내외
+
+<main color>
+검정색        color: #222;
+흰색          color: #fff;
+<point color>
+주황색     color: #ff6c57;
+<sub color>
+연노란색   color: #faf7e8;
+연주황색   color: #FDEAE0;
+
+<제목>
+국문     font-size: 39px;
+영문     font-size: 46px;
+<부제목>
+국문     font-size: 19px;
+영문     font-size: 32px;
+<탭>
+국문     font-size: 18px;
+영문     font-size: 20px;
+<본문>
+상품이름 font-size: 17px;
+맛       font-size: 16px;
+가격     font-size: 16px; font-weight: 700;
+*/
+
+
+
+/*-------------path---------------*/
+.path {
+	/* position: sticky; */
+	padding: 20px 0 40px;
+	top: 60px;
+}
+.path li {display: inline-block;}
+.path li a {font-size: 13px; color: #777;}
+.path li a span {
+	vertical-align: middle;
+	font-size: 15px;
+	color: #777;
+}
+
+
+
+/*-------------product_container---------------*/
+.top_infomation {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.main--img {
+  flex: 2;
+  width: 100%;
+  height: 480px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding-left: 60px;
+}
+.main--img img {
+  display: block;
+  width: auto;
+  height: 100%;
+}
+.thum {
+  width: 1;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+}
+.brand--logo {
+  width: 100px;
+  height: 100px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.brand--logo span {
+  font-size: 11px;
+}
+.brand--logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.thum--img {
+  display: flex;
+  width: 100px;
+  height: 100px;
+}
+.thum--img img {
+  display: block;
+  width: auto;
+  height: 100%;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.thum--img img:hover {
+  border: 1px solid #ccc;
+}
+
+.buy__option {}
+.buy__option h2 {
+  font-size: 23px;
+}
+.buy__option>p {
+  font-size: 15px;
+  color: #777;
+  margin: 10px 0 30px;
+}
+.opt--tab {
+  position: relative;
+  display: flex;
+  background-color: #ccc;
+  width: 300px;
+  height: 34px;
+  border-radius: 20px;
+  text-align: center;
+  margin: 30px 0;
+}
+.opt--tab span {
+  flex: 1;
+  font-size: 15px;
+  color: #777;
+  line-height: 32px;
+  cursor: pointer;
+}
+.opt_tab_btn {
+  position: absolute;
+  width: 50%;
+  height: 32px;
+  font-weight: 500;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  text-indent: -9999px;
+  transition: all .3s ease;
+}
+.info li {
+  display: flex;
+  line-height: 40px;
+}
+.info li:nth-child(2) span {
+  color: #777;
+}
+.info li p:first-child {
+  width: 100px;
+  font-size: 15px;
+  color: #777;
+}
+.info--opt {
+  display: inline-block;
+  line-height: 30px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 13px;
+  color: #777;
+  margin: 0 10px 10px 0;
+}
+.buy_oneth, .subscribe {
+  transform: translate(0, 0);
+  z-index: 1;
+}
+
+.buy--btns button {
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 15px;
+  outline: none;
+  border: 1px solid #ff6c57;
+  border-radius: 25px;
+  box-sizing: border-box;
+  margin: 30px 10px 0 0;
+  background-color: white;
+  cursor: pointer;
+}
+.buy--btns .buy--btn {
+  color: white;
+  background-color: #ff6c57;
+}
+#heartBtn {display: none;}
+#heartBtn:checked ~ .heart {color: #ff6c57;}
+#heartBtn ~ .heart {color: #dfdfdf;}
+.buy--btns label {
+  font-size: 40px;
+  color: #dfdfdf;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+.buy__option .info_subscribe_container {display: none;}
+.buy__option .info__subscribe {display: flex;}
+
+/*-------------detail_container---------------*/
+.detail_container {
+  padding: 100px 0;
+}
+
+.sectionTab { /*섹션 탭*/
+  display: flex;
+}
+.sectionTab>div { 
+  flex: 1;
+  margin: 10px 0;
+  background-color: #f9f9f9;
+  border-top: 1px solid #dfdfdf;
+  border-right: 1px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 52px;
+}
+.sectionTab .tabOn {
+  background-color: transparent;
+  border-top: 1px solid #dfdfdf;
+  border-right: 1px solid #dfdfdf;
+  border-left: 1px solid #dfdfdf;
+  border-bottom: none;
+  box-sizing: border-box;
+}
+.sectionTab div a {
+  font-size: 15px;
+  color: #777;
+}
+.sectionTab div a span {
+  font-size: 15px;
+  color: #777;
+}
+.sectionTab .tabOn a {
+  color: #222;
+  font-size: 15px;
+  font-weight: 500;
+}
+.sectionTab .tabOn a span {
+  color: #222;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.tab02 div:nth-child(1),
+.tab03 div:nth-child(1),
+.tab04 div:nth-child(1) {
+  border-left: 1px solid #dfdfdf;
+}
+.tab02 div:nth-child(1) {
+  border-left: 1px solid #dfdfdf;
+  border-right: none;
+}
+.tab03 div:nth-child(2) {
+  border-right: none;
+}
+.tab04 div:nth-child(3) {
+  border-right: none;
+}
+
+
+
+/*-------------desc---------------*/
+.desc {
+  padding: 30px 0;
+}
+.desc>li {
+  display: flex;
+  gap: 30px;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 10px 0;
+}
+.desc>li p, .desc>li p strong {
+  font-size: 13px;
+  color: #777;
+}
+.desc .desc--title {
+  width: 290px;
+}
+
+
+
+/*-------------reviews---------------*/
+.reviews {
+  padding: 30px 0;
+}
+.reviews li a {
+  display: block;
+  line-height: 30px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f1f1;
+  text-align: center;
+}
+.reviews li a span {
+  display: inline-block;
+  font-size: 15px;
+}
+.review--tip {
+  width: 150px;
+  font-size: 12px !important;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-right: 10px;
+  color: white;
+  border-radius: 20px;
+  background-color: #ff6c57;
+}
+.review--star {
+  width: 150px;
+  font-size: 12px !important;
+  color: #777;
+  margin-right: 10px;
+}
+.review--title {
+  width: 805px;
+  text-align: left;
+}
+.user--name {
+  width: 150px;
+  color: #777;
+}
+.buy--date {
+  width: 150px;
+  color: #777;
+}
+
+.pagenation {
+  text-align: center;
+}
+.pagenation label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  font-size: 13px;
+  color: #999;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.pagenation .page--active {
+  color: #222;
+  font-weight: 500;
+  background-color: #f1f1f1;
+}
